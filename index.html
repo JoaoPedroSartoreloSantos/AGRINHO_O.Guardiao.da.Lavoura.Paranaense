@@ -16,19 +16,19 @@
     </div>
 
     <header class="cabecalho-principal">
-        <div class="titulo-container">
+        <div class="caixa-titulo">
             <h1>Agrinho 2026</h1>
             <h2>Projeto: MIP no agro Paranaense</h2>
         </div>
         
         <div class="controles-acessibilidade">
-            <button id="btn-diminuir-zoom" class="btn-ctrl" title="Diminuir Zoom">Zoom -</button>
-            <button id="btn-aumentar-zoom" class="btn-ctrl" title="Aumentar Zoom">Zoom +</button>
+            <button id="botao-diminuir-zoom" class="botao-controle" title="Diminuir Zoom">Zoom -</button>
+            <button id="botao-aumentar-zoom" class="botao-controle" title="Aumentar Zoom">Zoom +</button>
         </div>
     </header>
 
     <nav class="barra-navegacao">
-        <button id="btn-menu-mobile" class="btn-mobile">
+        <button id="botao-menu-celular" class="botao-celular">
             <span id="icone-menu">☰</span>
             <span id="texto-menu">Abrir menu</span>
         </button>
@@ -40,7 +40,7 @@
             <li><a href="#pergunta3">Diagnóstico Pragas</a></li>
             <li><a href="#modulo-2">Manejo Sustentável</a></li>
             <li><a href="#descarbonizacao">Descarbonização</a></li>
-            <li><a href="#mapa-pr">Mapa do Paraná</a></li>
+            <li><a href="#mapa-parana">Mapa do Paraná</a></li>
             <li><a href="#arena-jogo">Jogar</a></li>
         </ul>
     </nav>
@@ -60,12 +60,12 @@
 
         <section id="pergunta1">
             <h2>Como o controle de pragas ajuda a aumentar a produtividade? A comida não fica intoxicada?</h2>
-            <p>Imagine uma planta de soja ou de milho como se fosse um atleta se preparando para uma maratona. Para dar bons frutos e grãos pesados, essa planta precisa de 100% da sua energia focada no crescimento. Quando uma lagarta ou um fungo ataca, a planta gasta toda a sua energia tentando sobreviver e se curar. Ao fazer o controle de pragas de forma correta, o produtor age como um "médico" da lavoura, protegendo a planta para que ela possa produzir o máximo possível, o que garante colheitas recordes e comida abundante para a população.</p>
+            <p>Imagine uma planta de soja ou de milho como se fosse um atleta se preparando para uma maratona. Para dar bons frutos e grãos pesados, essa planta precisa de 100% da sua energia focada no crescimento. Quando uma lagarta ou um fungo ataca, a planta gasta toda a sua energia tentando sobreviver e se curar. Ao fazer o controle de pragas de forma correta, o produtor age como um "médico" da lavoura, tratando a planta para que ela possa produzir o máximo possível, o que garante colheitas recordes e comida abundante para a população.</p>
             <p>Agora, sobre o medo de a comida chegar "intoxicada" ou venenosa na nossa mesa: isso é um grande mito! Quando um produtor precisa aplicar um defensivo agrícola, ele não faz isso de qualquer jeito. Ele segue uma receita feita por um engenheiro agrônomo (como uma receita médica). Além disso, existe uma lei chamada <strong>Período de Carência</strong>. É um tempo obrigatório que o agricultor deve esperar entre a aplicação do produto e o dia da colheita. Durante esse tempo de espera, o sol, a chuva e a própria natureza degradam o produto. Quando o alimento vai para o supermercado, ele está limpo, testado e totalmente seguro para consumo.</p>
         </section>
 
         <section id="pergunta2">
-            <h2>Adubos, fertilizantes e alternatives naturais: Como substituir os agrotóxicos?</h2>
+            <h2>Adubos, fertilizantes e alternativas naturais: Como substituir os agrotóxicos?</h2>
             <p>A grande revolução que está acontecendo nas fazendas do Paraná neste exato momento atende pelo nome de <strong>Bioinsumos</strong>. Durante muito tempo, dependemos de produtos químicos agressivos, mas os cientistas descobriram como usar a própria natureza a nosso favor.</p>
             <ul>
                 <li><strong>Inoculantes Bacterianos:</strong> Em vez de jogar toneladas de adubo químico no solo, os produtores misturam as sementes com bactérias naturais "do bem". Quando a planta cresce, essas bactérias puxam o nitrogênio que está solto no ar e entregam diretamente na raiz da planta.</li>
@@ -114,11 +114,11 @@
         </section>
 
         <hr class="linha-divisoria">
-monit
-        <section id="mapa-pr">
+
+        <section id="mapa-parana">
             <h2>Mapa do Paraná</h2>
             <p>Explore o mapa do nosso estado. É nestas terras que a união entre tecnologia e natureza acontece todos os dias.</p>
-            <div class="container-mapa-real">
+            <div class="caixa-mapa-real">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658518.175510619!2d-54.6750058564251!3d-24.582846874845564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ea4840ab3d735d%3A0x8321d2b8b9a52701!2zUGFyYW7DoQ!5e0!3m2!1spt-BR!2sbr!4v1717739500000!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
@@ -137,9 +137,54 @@ monit
         </section>
 
     </main>
-<script src="main.js"</script>
 
-    <script> src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const raizHtml = document.documentElement; 
+            let tamanhoFonteBase = 16;
+
+            const botaoAumentar = document.getElementById("botao-aumentar-zoom");
+            const botaoDiminuir = document.getElementById("botao-diminuir-zoom");
+
+            if (botaoAumentar && botaoDiminuir) {
+                botaoAumentar.addEventListener("click", function() {
+                    if (tamanhoFonteBase < 26) { 
+                        tamanhoFonteBase += 2; 
+                        raizHtml.style.fontSize = tamanhoFonteBase + "px";
+                    }
+                });
+
+                botaoDiminuir.addEventListener("click", function() {
+                    if (tamanhoFonteBase > 12) { 
+                        tamanhoFonteBase -= 2;  
+                        raizHtml.style.fontSize = tamanhoFonteBase + "px";
+                    }
+                });
+            }
+            
+            const botaoMenuCelular = document.getElementById("botao-menu-celular");
+            const menuLinks = document.getElementById("menu-links");
+            const textoMenu = document.getElementById("texto-menu");
+            const iconeMenu = document.getElementById("icone-menu");
+
+            if (botaoMenuCelular && menuLinks) {
+                botaoMenuCelular.addEventListener("click", function() {
+                    menuLinks.classList.toggle("ativo");
+                    
+                    if (menuLinks.classList.contains("ativo")) {
+                        textoMenu.textContent = "Fechar menu";
+                        iconeMenu.textContent = "✕"; 
+                    } else {
+                        textoMenu.textContent = "Abrir menu";
+                        iconeMenu.textContent = "☰"; 
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script src="principal.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
