@@ -1,14 +1,19 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
 :root {
     --verde-escuro: #2E7D32;
     --verde-claro: #4CAF50;
-    --verde-fundo-cabecalho: #e8f5e9; /* NOVO: Verde bem clarinho para o fundo */
+    --verde-fundo-cabecalho: #e8f5e9; 
     --dourado: #ffd700;
     --texto-escuro: #2b2b2b;
     --branco: #ffffff;
 }
 
 body {
-    background-image: url('img/fundo-agro.png') !important; 
+    background-image: url('img/fundo-agro.png'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -18,27 +23,26 @@ body {
     color: var(--texto-escuro);
 }
 
-/* Cabeçalho com Verde Clarinho */
 .cabecalho-principal {
-    background-color: var(--verde-fundo-cabecalho); /* Cor verde clarinha aplicada aqui */
+    background-color: var(--verde-fundo-cabecalho); 
     padding: 1.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    border-bottom: 2px solid var(--verde-claro); /* Linha sutil para dividir o topo */
+    border-bottom: 2px solid var(--verde-claro); 
 }
 
-.titulo-container h1 {
+.caixa-titulo h1 {
     margin: 0;
-    color: var(--verde-escuro); /* Texto escuro para contrastar com o fundo claro */
+    color: var(--verde-escuro); 
     font-size: 2.5rem;
 }
 
-.titulo-container h2 {
+.caixa-titulo h2 {
     margin: 0.5rem 0 0 0;
-    color: var(--verde-claro); /* Subtítulo em verde médio */
+    color: var(--verde-claro); 
     font-size: 1.2rem;
 }
 
@@ -47,7 +51,7 @@ body {
     gap: 1rem;
 }
 
-.btn-ctrl {
+.botao-controle {
     background-color: var(--verde-escuro);
     color: var(--branco);
     border: none;
@@ -59,12 +63,11 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.btn-ctrl:hover {
+.botao-controle:hover {
     background-color: var(--dourado);
     color: var(--texto-escuro);
 }
 
-/* Barra de Navegação */
 .barra-navegacao {
     background-color: var(--verde-escuro); 
     padding: 0.8rem 1rem;
@@ -101,8 +104,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Botão Mobile Estilizado */
-.btn-mobile {
+.botao-celular {
     display: none; 
     background-color: transparent;
     color: var(--branco);
@@ -115,17 +117,16 @@ body {
     transition: all 0.3s ease;
 }
 
-.btn-mobile:hover {
+.botao-celular:hover {
     background-color: var(--dourado);
     color: var(--texto-escuro);
     border-color: var(--dourado);
     transform: translateY(-2px);
 }
 
-/* Caixa Branca Principal Protegida */
 .conteudo-principal {
-    background-color: var(--branco) !important;
-    color: var(--texto-escuro) !important;
+    background-color: var(--branco);
+    color: var(--texto-escuro);
     max-width: 1100px;
     margin: 2rem auto;
     padding: 2.5rem;
@@ -137,12 +138,12 @@ body {
 .conteudo-principal h3, 
 .conteudo-principal p,
 .conteudo-principal li {
-    color: var(--texto-escuro) !important;
+    color: var(--texto-escuro);
     line-height: 1.6;
 }
 
 .conteudo-principal h2 {
-    color: var(--verde-escuro) !important;
+    color: var(--verde-escuro);
     margin-top: 2rem;
     border-bottom: 2px solid var(--verde-claro);
     padding-bottom: 0.5rem;
@@ -167,14 +168,14 @@ body {
     margin: 3rem 0;
 }
 
-.container-mapa-real iframe {
+.caixa-mapa-real iframe {
     max-width: 100%;
 }
 
 .btn-jogo {
     display: inline-block;
     background-color: var(--verde-escuro);
-    color: var(--branco) !important;
+    color: var(--branco);
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
@@ -186,7 +187,7 @@ body {
 
 .btn-jogo:hover {
     background-color: var(--dourado);
-    color: var(--texto-escuro) !important;
+    color: var(--texto-escuro);
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(255, 215, 0, 0.4);
 }
@@ -194,11 +195,10 @@ body {
 .txt-centralizado {
     text-align: center;
     font-weight: bold;
-    color: var(--verde-escuro) !important;
+    color: var(--verde-escuro);
     margin-bottom: 1.5rem;
 }
 
-/* Responsividade de Telas Celulares */
 @media (max-width: 768px) {
     .cabecalho-principal {
         flex-direction: column;
@@ -211,7 +211,7 @@ body {
         padding: 1.5rem;
     }
 
-    .btn-mobile {
+    .botao-celular {
         display: flex; 
         align-items: center;
         justify-content: center;
