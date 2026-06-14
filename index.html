@@ -49,7 +49,7 @@
         
         <section id="modulo-1">
             <h2>Nossa Proposta - Agrinho 2026</h2>
-            <p>A agricultura paranaense é uma das mais fortes do mundo, e a nossa proposta para o Agrinho 2026 é mostrar que é possível produzir muito, gerar riqueza e, ao mesmo tempo, cuidar da nossa terra. Este site foi criado para conectar as pessoas da cidade com a realidade moderna do campo. Queremos mostrar que o agricultor de hoje é um grande aliado do meio ambiente, utilizando tecnologia de ponta para garantir que a comida chegue farta e saudável na mesa de todos os brasileiros.</p>
+            <p>A agricultura paranaense é uma das mais fortes do mundo, e a nossa proposta para o Agrinho 2026 é mostrar que é possível produzir muito, gerar riqueza e, ao mesmo tempo, cuidar da nossa terra. Este site foi criado para conectar as pessoas da cidade com a realidade moderna do campo. Queremos mostrar que o agricultor de hoje é um grande aliado do meio ambiente, utilizando tecnologia de ponta para garantir que a comida chegue farta and saudável na mesa de todos os brasileiros.</p>
             
             <div class="espaco-imagem">
                 <img src="img/tecnologia no campo paranaense.png" class="foto-fluida">
@@ -80,7 +80,7 @@
 
         <section id="pergunta3">
             <h2>Como um produtor descobre que a plantação está doente e o que ele faz para salvar?</h2>
-            <p>A identificação começa lá do alto: os produtores utilizam drones modernos equipados com câmeras térmicas e sensores de cores. O drone sobrevoa a fazenda e manda um mapa direto para o celular do agricultor.</p>
+            <p>A identification começa lá do alto: os produtores utilizam drones modernos equipados com câmeras térmicas e sensores de cores. O drone sobrevoa a fazenda e manda um mapa direto para o celular do agricultor.</p>
             <p>O diagnóstico é visualizado logo em seguida: folhas esbranquiçadas indicam ataque de fungos; folhas comidas mostram que há lagartas; e plantas murchas podem indicar falta de água. Sabendo o ponto exato onde está o problema, o agricultor não precisa pulverizar a fazenda inteira! Ele vai apenas naquela mancha específica e aplica a solução, como liberar minúsculas "vespinhas" criadas em laboratório que destroem os ovos da praga de forma cirúrgica e 100% natural.</p>
             
             <div class="espaco-imagem">
@@ -138,52 +138,7 @@
 
     </main>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const raizHtml = document.documentElement; 
-            let tamanhoFonteBase = 16;
-
-            const botaoAumentar = document.getElementById("botao-aumentar-zoom");
-            const botaoDiminuir = document.getElementById("botao-diminuir-zoom");
-
-            if (botaoAumentar && botaoDiminuir) {
-                botaoAumentar.addEventListener("click", function() {
-                    if (tamanhoFonteBase < 26) { 
-                        tamanhoFonteBase += 2; 
-                        raizHtml.style.fontSize = tamanhoFonteBase + "px";
-                    }
-                });
-
-                botaoDiminuir.addEventListener("click", function() {
-                    if (tamanhoFonteBase > 12) { 
-                        tamanhoFonteBase -= 2;  
-                        raizHtml.style.fontSize = tamanhoFonteBase + "px";
-                    }
-                });
-            }
-            
-            const botaoMenuCelular = document.getElementById("botao-menu-celular");
-            const menuLinks = document.getElementById("menu-links");
-            const textoMenu = document.getElementById("texto-menu");
-            const iconeMenu = document.getElementById("icone-menu");
-
-            if (botaoMenuCelular && menuLinks) {
-                botaoMenuCelular.addEventListener("click", function() {
-                    menuLinks.classList.toggle("ativo");
-                    
-                    if (menuLinks.classList.contains("ativo")) {
-                        textoMenu.textContent = "Fechar menu";
-                        iconeMenu.textContent = "✕"; 
-                    } else {
-                        textoMenu.textContent = "Abrir menu";
-                        iconeMenu.textContent = "☰"; 
-                    }
-                });
-            }
-        });
-    </script>
-
-    <script src="principal.js"></script>
+    <script src="main.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
